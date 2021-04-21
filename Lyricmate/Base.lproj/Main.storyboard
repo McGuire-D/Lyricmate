@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U0X-JB-Cjv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Player View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lyricmate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AVPlayerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,19 +65,16 @@
         <!--View Controller-->
         <scene sceneID="I6p-az-5Df">
             <objects>
-                <viewController id="U0X-JB-Cjv" sceneMemberID="viewController">
+                <viewController id="U0X-JB-Cjv" customClass="ViewController" customModule="Lyricmate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPb-of-bDy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gVg-0s-qQ6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="349"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sRr-Eq-AF9">
-                                <rect key="frame" x="0.0" y="472" width="414" height="424"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sRr-Eq-AF9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBk-IQ-RGL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="424"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <color key="tintColor" red="0.62973719839999998" green="0.15225157140000001" blue="0.130266875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
@@ -93,16 +90,15 @@
                         <viewLayoutGuide key="safeArea" id="wmA-LM-3XO"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
-                            <constraint firstItem="sRr-Eq-AF9" firstAttribute="top" secondItem="cPb-of-bDy" secondAttribute="top" constant="472" id="6kI-Pn-55i"/>
-                            <constraint firstItem="sRr-Eq-AF9" firstAttribute="top" secondItem="gVg-0s-qQ6" secondAttribute="bottom" constant="79" id="EKs-i7-sEM"/>
-                            <constraint firstItem="gVg-0s-qQ6" firstAttribute="top" secondItem="wmA-LM-3XO" secondAttribute="top" id="GfP-66-fnp"/>
-                            <constraint firstItem="sRr-Eq-AF9" firstAttribute="trailing" secondItem="wmA-LM-3XO" secondAttribute="trailing" id="T7g-0y-0YT"/>
-                            <constraint firstItem="gVg-0s-qQ6" firstAttribute="leading" secondItem="wmA-LM-3XO" secondAttribute="leading" id="ok0-0k-bj2"/>
-                            <constraint firstItem="gVg-0s-qQ6" firstAttribute="trailing" secondItem="wmA-LM-3XO" secondAttribute="trailing" id="qCc-uQ-Agt"/>
-                            <constraint firstAttribute="bottom" secondItem="sRr-Eq-AF9" secondAttribute="bottom" id="qdM-m5-dO2"/>
-                            <constraint firstItem="sRr-Eq-AF9" firstAttribute="leading" secondItem="wmA-LM-3XO" secondAttribute="leading" id="y6o-Bc-4tX"/>
+                            <constraint firstItem="wmA-LM-3XO" firstAttribute="trailing" secondItem="sRr-Eq-AF9" secondAttribute="trailing" id="Nqs-By-c8G"/>
+                            <constraint firstItem="sRr-Eq-AF9" firstAttribute="leading" secondItem="wmA-LM-3XO" secondAttribute="leading" id="UQn-Ko-Pzv"/>
+                            <constraint firstItem="wmA-LM-3XO" firstAttribute="bottom" secondItem="sRr-Eq-AF9" secondAttribute="bottom" id="Z7h-QP-sN2"/>
+                            <constraint firstItem="sRr-Eq-AF9" firstAttribute="top" secondItem="wmA-LM-3XO" secondAttribute="top" id="jHz-8f-tdA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordButton" destination="qBk-IQ-RGL" id="9wi-0e-gx5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrY-n1-SaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
