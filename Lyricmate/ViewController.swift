@@ -9,15 +9,17 @@ import UIKit
 import AVFoundation
 
 
-class ViewController: UIViewController, AVAudioRecorderDelegate {
+class ViewController: UIViewController, AVAudioRecorderDelegate{
 
 
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
     
     
     //var recordButton: UIButton!
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
+    var playBack: AVAudioPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +97,19 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             finishRecording(success: false)
         }
     }
+    
+    @IBAction func playBackAudio() {
+        let path = Bundle.main.path(forResource: "recording.m4a" , ofType: nil)!
+        let url = URL(fileURLWithPath: path )
+
+        do {
+            playBack = try AVAudioPlayer(contentsOf: url)
+            playBack?.play()
+        } catch {
+        //
+    }
+    
 
 }
 
+}

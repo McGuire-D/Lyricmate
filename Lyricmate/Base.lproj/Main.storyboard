@@ -73,8 +73,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sRr-Eq-AF9">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pm9-N6-sAM" userLabel="PlayButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" image="play.rectangle.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playBackAudio" destination="U0X-JB-Cjv" eventType="touchUpInside" id="17m-6a-KJD"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBk-IQ-RGL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="409" width="414" height="409"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <color key="tintColor" red="0.62973719839999998" green="0.15225157140000001" blue="0.130266875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
@@ -97,6 +108,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="Pm9-N6-sAM" id="ZN3-Ce-9EA"/>
                         <outlet property="recordButton" destination="qBk-IQ-RGL" id="9wi-0e-gx5"/>
                     </connections>
                 </viewController>
@@ -106,12 +118,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="record.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
