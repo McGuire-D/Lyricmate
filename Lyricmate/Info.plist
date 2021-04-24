@@ -6,6 +6,8 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This app requires access to Microphone to record</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>This app requires speech to text to function</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict/>

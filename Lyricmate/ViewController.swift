@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Speech
 
 
 class ViewController: UIViewController, AVAudioRecorderDelegate{
@@ -14,6 +15,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
 
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var transcribeText: UITextField!
     
     
     //var recordButton: UIButton!
@@ -24,7 +26,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         recordingSession = AVAudioSession.sharedInstance()
-
+        requestTranscribePermissions()
         do {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
@@ -87,6 +89,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
     
     @objc func recordTapped() {
         if audioRecorder == nil {
+
             startRecording()
         } else {
             finishRecording(success: true)
@@ -99,17 +102,53 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
     }
     
     @IBAction func playBackAudio() {
-        let path = Bundle.main.path(forResource: "recording.m4a" , ofType: nil)!
-        let url = URL(fileURLWithPath: path )
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
 
         do {
-            playBack = try AVAudioPlayer(contentsOf: url)
+            playBack = try AVAudioPlayer(contentsOf: audioFilename)
             playBack?.play()
+            transcribeAudio(url: audioFilename)
         } catch {
         //
     }
     
 
 }
+    
+    func requestTranscribePermissions() {
+        SFSpeechRecognizer.requestAuthorization { [unowned self] authStatus in
+            DispatchQueue.main.async {
+                if authStatus == .authorized {
+                    print("Good to go!")
+                } else {
+                    print("Transcription permission was declined.")
+                }
+            }
+        }
+    }
+    
+    func transcribeAudio(url: URL) {
+        // create a new recognizer and point it at our audio
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+
+        let recognizer = SFSpeechRecognizer()
+        let request = SFSpeechURLRecognitionRequest(url: audioFilename)
+
+        // start recognition!
+        recognizer?.recognitionTask(with: request) { [unowned self] (result, error) in
+            // abort if we didn't get any transcription back
+            guard let result = result else {
+                print("There was an error: \(error!)")
+                return
+            }
+
+            // if we got the final transcription back, print it
+            if result.isFinal {
+                transcribeText.text = result.bestTranscription.formattedString
+                // pull out the best transcription...
+                print(result.bestTranscription.formattedString)
+            }
+        }
+    }
 
 }
