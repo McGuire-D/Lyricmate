@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5A0601C261BEE15003C7CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0601B261BEE15003C7CF0 /* AppDelegate.swift */; };
+		A5A0601E261BEE15003C7CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0601D261BEE15003C7CF0 /* SceneDelegate.swift */; };
+		A5A06020261BEE15003C7CF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0601F261BEE15003C7CF0 /* ViewController.swift */; };
+		A5A06023261BEE15003C7CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A06021261BEE15003C7CF0 /* Main.storyboard */; };
+		A5A06025261BEE1A003C7CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A06024261BEE1A003C7CF0 /* Assets.xcassets */; };
+		A5A06028261BEE1A003C7CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A06026261BEE1A003C7CF0 /* LaunchScreen.storyboard */; };
+		A5A06033261BEE1A003C7CF0 /* LyricmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A06032261BEE1A003C7CF0 /* LyricmateTests.swift */; };
+		A5A0603E261BEE1A003C7CF0 /* LyricmateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0603D261BEE1A003C7CF0 /* LyricmateUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5A0602F261BEE1A003C7CF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5A06010261BEE14003C7CF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5A06017261BEE15003C7CF0;
+			remoteInfo = Lyricmate;
+		};
+		A5A0603A261BEE1A003C7CF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5A06010261BEE14003C7CF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5A06017261BEE15003C7CF0;
+			remoteInfo = Lyricmate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5A06018261BEE15003C7CF0 /* Lyricmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyricmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A0601B261BEE15003C7CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5A0601D261BEE15003C7CF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A5A0601F261BEE15003C7CF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5A06022261BEE15003C7CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5A06024261BEE1A003C7CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5A06027261BEE1A003C7CF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5A06029261BEE1A003C7CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A0602E261BEE1A003C7CF0 /* LyricmateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricmateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A06032261BEE1A003C7CF0 /* LyricmateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricmateTests.swift; sourceTree = "<group>"; };
+		A5A06034261BEE1A003C7CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A06039261BEE1A003C7CF0 /* LyricmateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricmateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A0603D261BEE1A003C7CF0 /* LyricmateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricmateUITests.swift; sourceTree = "<group>"; };
+		A5A0603F261BEE1A003C7CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5A06015261BEE15003C7CF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5A0602B261BEE1A003C7CF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5A06036261BEE1A003C7CF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5A0600F261BEE14003C7CF0 = {
+			isa = PBXGroup;
+			children = (
+				A5A0601A261BEE15003C7CF0 /* Lyricmate */,
+				A5A06031261BEE1A003C7CF0 /* LyricmateTests */,
+				A5A0603C261BEE1A003C7CF0 /* LyricmateUITests */,
+				A5A06019261BEE15003C7CF0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5A06019261BEE15003C7CF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5A06018261BEE15003C7CF0 /* Lyricmate.app */,
+				A5A0602E261BEE1A003C7CF0 /* LyricmateTests.xctest */,
+				A5A06039261BEE1A003C7CF0 /* LyricmateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5A0601A261BEE15003C7CF0 /* Lyricmate */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0601B261BEE15003C7CF0 /* AppDelegate.swift */,
+				A5A0601D261BEE15003C7CF0 /* SceneDelegate.swift */,
+				A5A0601F261BEE15003C7CF0 /* ViewController.swift */,
+				A5A06021261BEE15003C7CF0 /* Main.storyboard */,
+				A5A06024261BEE1A003C7CF0 /* Assets.xcassets */,
+				A5A06026261BEE1A003C7CF0 /* LaunchScreen.storyboard */,
+				A5A06029261BEE1A003C7CF0 /* Info.plist */,
+			);
+			path = Lyricmate;
+			sourceTree = "<group>";
+		};
+		A5A06031261BEE1A003C7CF0 /* LyricmateTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5A06032261BEE1A003C7CF0 /* LyricmateTests.swift */,
+				A5A06034261BEE1A003C7CF0 /* Info.plist */,
+			);
+			path = LyricmateTests;
+			sourceTree = "<group>";
+		};
+		A5A0603C261BEE1A003C7CF0 /* LyricmateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0603D261BEE1A003C7CF0 /* LyricmateUITests.swift */,
+				A5A0603F261BEE1A003C7CF0 /* Info.plist */,
+			);
+			path = LyricmateUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5A06017261BEE15003C7CF0 /* Lyricmate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5A06042261BEE1A003C7CF0 /* Build configuration list for PBXNativeTarget "Lyricmate" */;
+			buildPhases = (
+				A5A06014261BEE15003C7CF0 /* Sources */,
+				A5A06015261BEE15003C7CF0 /* Frameworks */,
+				A5A06016261BEE15003C7CF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lyricmate;
+			productName = Lyricmate;
+			productReference = A5A06018261BEE15003C7CF0 /* Lyricmate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5A0602D261BEE1A003C7CF0 /* LyricmateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5A06045261BEE1A003C7CF0 /* Build configuration list for PBXNativeTarget "LyricmateTests" */;
+			buildPhases = (
+				A5A0602A261BEE1A003C7CF0 /* Sources */,
+				A5A0602B261BEE1A003C7CF0 /* Frameworks */,
+				A5A0602C261BEE1A003C7CF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5A06030261BEE1A003C7CF0 /* PBXTargetDependency */,
+			);
+			name = LyricmateTests;
+			productName = LyricmateTests;
+			productReference = A5A0602E261BEE1A003C7CF0 /* LyricmateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5A06038261BEE1A003C7CF0 /* LyricmateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5A06048261BEE1A003C7CF0 /* Build configuration list for PBXNativeTarget "LyricmateUITests" */;
+			buildPhases = (
+				A5A06035261BEE1A003C7CF0 /* Sources */,
+				A5A06036261BEE1A003C7CF0 /* Frameworks */,
+				A5A06037261BEE1A003C7CF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5A0603B261BEE1A003C7CF0 /* PBXTargetDependency */,
+			);
+			name = LyricmateUITests;
+			productName = LyricmateUITests;
+			productReference = A5A06039261BEE1A003C7CF0 /* LyricmateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5A06010261BEE14003C7CF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					A5A06017261BEE15003C7CF0 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					A5A0602D261BEE1A003C7CF0 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = A5A06017261BEE15003C7CF0;
+					};
+					A5A06038261BEE1A003C7CF0 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = A5A06017261BEE15003C7CF0;
+					};
+				};
+			};
+			buildConfigurationList = A5A06013261BEE14003C7CF0 /* Build configuration list for PBXProject "Lyricmate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5A0600F261BEE14003C7CF0;
+			productRefGroup = A5A06019261BEE15003C7CF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5A06017261BEE15003C7CF0 /* Lyricmate */,
+				A5A0602D261BEE1A003C7CF0 /* LyricmateTests */,
+				A5A06038261BEE1A003C7CF0 /* LyricmateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5A06016261BEE15003C7CF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A06028261BEE1A003C7CF0 /* LaunchScreen.storyboard in Resources */,
+				A5A06025261BEE1A003C7CF0 /* Assets.xcassets in Resources */,
+				A5A06023261BEE15003C7CF0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5A0602C261BEE1A003C7CF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5A06037261BEE1A003C7CF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5A06014261BEE15003C7CF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A06020261BEE15003C7CF0 /* ViewController.swift in Sources */,
+				A5A0601C261BEE15003C7CF0 /* AppDelegate.swift in Sources */,
+				A5A0601E261BEE15003C7CF0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5A0602A261BEE1A003C7CF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A06033261BEE1A003C7CF0 /* LyricmateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5A06035261BEE1A003C7CF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A0603E261BEE1A003C7CF0 /* LyricmateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5A06030261BEE1A003C7CF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5A06017261BEE15003C7CF0 /* Lyricmate */;
+			targetProxy = A5A0602F261BEE1A003C7CF0 /* PBXContainerItemProxy */;
+		};
+		A5A0603B261BEE1A003C7CF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5A06017261BEE15003C7CF0 /* Lyricmate */;
+			targetProxy = A5A0603A261BEE1A003C7CF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5A06021261BEE15003C7CF0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5A06022261BEE15003C7CF0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5A06026261BEE1A003C7CF0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5A06027261BEE1A003C7CF0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5A06040261BEE1A003C7CF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A5A06041261BEE1A003C7CF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5A06043261BEE1A003C7CF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z6Z6NLD29;
+				INFOPLIST_FILE = Lyricmate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "relevant-Inc.Lyricmate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5A06044261BEE1A003C7CF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z6Z6NLD29;
+				INFOPLIST_FILE = Lyricmate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "relevant-Inc.Lyricmate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A5A06046261BEE1A003C7CF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z6Z6NLD29;
+				INFOPLIST_FILE = LyricmateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "relevant-Inc.LyricmateTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyricmate.app/Lyricmate";
+			};
+			name = Debug;
+		};
+		A5A06047261BEE1A003C7CF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z6Z6NLD29;
+				INFOPLIST_FILE = LyricmateTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "relevant-Inc.LyricmateTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyricmate.app/Lyricmate";
+			};
+			name = Release;
+		};
+		A5A06049261BEE1A003C7CF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z6Z6NLD29;
+				INFOPLIST_FILE = LyricmateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "relevant-Inc.LyricmateUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lyricmate;
+			};
+			name = Debug;
+		};
+		A5A0604A261BEE1A003C7CF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Z6Z6NLD29;
+				INFOPLIST_FILE = LyricmateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "relevant-Inc.LyricmateUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lyricmate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5A06013261BEE14003C7CF0 /* Build configuration list for PBXProject "Lyricmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A06040261BEE1A003C7CF0 /* Debug */,
+				A5A06041261BEE1A003C7CF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5A06042261BEE1A003C7CF0 /* Build configuration list for PBXNativeTarget "Lyricmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A06043261BEE1A003C7CF0 /* Debug */,
+				A5A06044261BEE1A003C7CF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5A06045261BEE1A003C7CF0 /* Build configuration list for PBXNativeTarget "LyricmateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A06046261BEE1A003C7CF0 /* Debug */,
+				A5A06047261BEE1A003C7CF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5A06048261BEE1A003C7CF0 /* Build configuration list for PBXNativeTarget "LyricmateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A06049261BEE1A003C7CF0 /* Debug */,
+				A5A0604A261BEE1A003C7CF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5A06010261BEE14003C7CF0 /* Project object */;
+}
