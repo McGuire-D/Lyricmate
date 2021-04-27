@@ -54,7 +54,6 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="shi-9X-vdz"/>
-                        <barButtonItem title="Record" id="qMX-31-FMO"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -70,13 +69,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8eg-kS-aWw" userLabel="Transcribe Text Field">
-                                <rect key="frame" x="41.5" y="341" width="331" height="224"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8yd-dQ-KMT">
+                                <rect key="frame" x="0.0" y="249.5" width="414" height="224"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="bottom" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBk-IQ-RGL">
-                                <rect key="frame" x="0.0" y="12" width="414" height="882"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBk-IQ-RGL">
+                                <rect key="frame" x="0.0" y="76" width="414" height="141.5"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <color key="tintColor" red="0.62973719839999998" green="0.15225157140000001" blue="0.130266875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
@@ -86,10 +87,10 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100" scale="large"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pm9-N6-sAM" userLabel="PlayButton">
-                                <rect key="frame" x="20" y="76" width="414" height="754"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pm9-N6-sAM" userLabel="PlayButton">
+                                <rect key="frame" x="0.0" y="505.5" width="414" height="104"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <color key="tintColor" red="0.62973719839999998" green="0.15225157140000001" blue="0.130266875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="play.rectangle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100"/>
                                 </state>
@@ -97,28 +98,42 @@
                                     <action selector="playBackAudio" destination="U0X-JB-Cjv" eventType="touchUpInside" id="17m-6a-KJD"/>
                                 </connections>
                             </button>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5r-q7-x8j">
+                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem badgeValue="Save " selectedImage="square.and.arrow.down.fill" catalog="system" id="5BS-A0-2pu" userLabel="SaveButton">
+                                        <color key="badgeColor" red="0.62973719839999998" green="0.15225157140000001" blue="0.130266875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tabBarItem>
+                                    <tabBarItem badgeValue="File" selectedImage="folder.fill.badge.gear" catalog="system" id="7ze-8i-2M5" userLabel="FileButton">
+                                        <color key="badgeColor" red="0.62973719839999998" green="0.15225157140000001" blue="0.130266875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tabBarItem>
+                                </items>
+                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wmA-LM-3XO"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
-                            <constraint firstItem="wmA-LM-3XO" firstAttribute="top" secondItem="qBk-IQ-RGL" secondAttribute="top" constant="32" id="6KX-P7-HfN"/>
-                            <constraint firstItem="qBk-IQ-RGL" firstAttribute="width" secondItem="cPb-of-bDy" secondAttribute="width" multiplier="0.8" id="8uM-hj-P7g"/>
-                            <constraint firstItem="8eg-kS-aWw" firstAttribute="height" secondItem="cPb-of-bDy" secondAttribute="height" multiplier="0.25" id="A8C-hh-ZhL"/>
-                            <constraint firstItem="qBk-IQ-RGL" firstAttribute="centerY" secondItem="wmA-LM-3XO" secondAttribute="centerY" id="Cpp-ZN-Si0"/>
-                            <constraint firstItem="8eg-kS-aWw" firstAttribute="centerX" secondItem="wmA-LM-3XO" secondAttribute="centerX" id="GS3-QC-eGd"/>
-                            <constraint firstItem="qBk-IQ-RGL" firstAttribute="height" secondItem="cPb-of-bDy" secondAttribute="height" multiplier="0.25" id="Qcj-rk-aLx"/>
-                            <constraint firstItem="Pm9-N6-sAM" firstAttribute="width" secondItem="cPb-of-bDy" secondAttribute="width" multiplier="0.8" id="RMI-Ap-UDl"/>
-                            <constraint firstItem="Pm9-N6-sAM" firstAttribute="height" secondItem="cPb-of-bDy" secondAttribute="height" multiplier="0.25" id="Rlc-hw-VY8"/>
-                            <constraint firstItem="8eg-kS-aWw" firstAttribute="centerY" secondItem="wmA-LM-3XO" secondAttribute="centerY" id="UpO-Ly-kdc"/>
-                            <constraint firstItem="Pm9-N6-sAM" firstAttribute="centerY" secondItem="wmA-LM-3XO" secondAttribute="centerY" id="evi-7m-Gds"/>
-                            <constraint firstItem="8eg-kS-aWw" firstAttribute="width" secondItem="cPb-of-bDy" secondAttribute="width" multiplier="0.8" id="qYX-XP-Y6E"/>
-                            <constraint firstItem="wmA-LM-3XO" firstAttribute="bottom" secondItem="Pm9-N6-sAM" secondAttribute="bottom" constant="32" id="z3p-Io-voX"/>
+                            <constraint firstItem="8yd-dQ-KMT" firstAttribute="width" secondItem="cPb-of-bDy" secondAttribute="width" id="9nF-ez-ZtB"/>
+                            <constraint firstItem="Pm9-N6-sAM" firstAttribute="top" secondItem="8yd-dQ-KMT" secondAttribute="bottom" constant="32" id="D8f-GZ-1gr"/>
+                            <constraint firstItem="8yd-dQ-KMT" firstAttribute="height" secondItem="cPb-of-bDy" secondAttribute="height" multiplier="0.25" id="DGz-xo-jn9"/>
+                            <constraint firstItem="wmA-LM-3XO" firstAttribute="top" secondItem="qBk-IQ-RGL" secondAttribute="top" constant="-32" id="ErH-hz-TFZ"/>
+                            <constraint firstItem="8yd-dQ-KMT" firstAttribute="top" secondItem="qBk-IQ-RGL" secondAttribute="bottom" constant="32" id="HO2-OC-eMO"/>
+                            <constraint firstItem="8yd-dQ-KMT" firstAttribute="centerX" secondItem="wmA-LM-3XO" secondAttribute="centerX" id="aqn-C4-hw8"/>
+                            <constraint firstItem="Pm9-N6-sAM" firstAttribute="width" secondItem="cPb-of-bDy" secondAttribute="width" id="dwX-eW-4kz"/>
+                            <constraint firstItem="qBk-IQ-RGL" firstAttribute="centerX" secondItem="wmA-LM-3XO" secondAttribute="centerX" id="m0c-ZO-mF9"/>
+                            <constraint firstItem="Pm9-N6-sAM" firstAttribute="centerX" secondItem="wmA-LM-3XO" secondAttribute="centerX" id="qUy-IM-fAH"/>
+                            <constraint firstItem="qBk-IQ-RGL" firstAttribute="width" secondItem="cPb-of-bDy" secondAttribute="width" id="w7Y-dj-D2D"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="TranscribeText" destination="8eg-kS-aWw" id="cCR-6z-h3S"/>
                         <outlet property="playButton" destination="Pm9-N6-sAM" id="ZN3-Ce-9EA"/>
                         <outlet property="recordButton" destination="qBk-IQ-RGL" id="9wi-0e-gx5"/>
+                        <outlet property="transcribeText" destination="8yd-dQ-KMT" id="TBO-Wa-94L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrY-n1-SaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -127,16 +142,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="folder.fill.badge.gear" catalog="system" width="128" height="94"/>
         <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="record.circle" catalog="system" width="128" height="121"/>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

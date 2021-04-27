@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import Speech
+import CoreData
 
 
 class ViewController: UIViewController, AVAudioRecorderDelegate{
@@ -15,7 +16,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
 
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var transcribeText: UITextField!
+    @IBOutlet weak var transcribeText: UITextView!
     
     
     //var recordButton: UIButton!
@@ -150,5 +151,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
             }
         }
     }
-
+       
+   
 }
