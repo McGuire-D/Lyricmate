@@ -23,6 +23,8 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var playBack: AVAudioPlayer?
+    var lyrics: NSManagedObject = [Lyrics]
+    var sound: NSManagedObject = [Lyrics]
 
     override func viewDidLoad() {
         super.viewDidLoad()
