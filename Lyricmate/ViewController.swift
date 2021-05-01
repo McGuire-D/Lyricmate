@@ -24,13 +24,18 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var playBack: AVAudioPlayer?
-    var lyrics: NSManagedObject = [Lyrics]
-    var sound: NSManagedObject = [Lyrics]
+    var coreDataManager: CoreDataManager!
+    //var lyrics: NSManagedObject = [Lyrics]
+    //var sound: NSManagedObject = [Lyrics]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         recordingSession = AVAudioSession.sharedInstance()
         requestTranscribePermissions()
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let managedContext = appDelegate!.persistentContainer.viewContext
+        coreDataManager = CoreDataManager(managedContext: managedContext)
         do {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
@@ -85,7 +90,6 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
 
         if success {
             recordButton.setTitle("Tap to Re-record", for: .normal)
-    
         } else {
             recordButton.setTitle("Tap to Record", for: .normal)
             // recording failed :(
@@ -113,6 +117,7 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
             playBack = try AVAudioPlayer(contentsOf: audioFilename)
             playBack?.play()
             transcribeAudio(url: audioFilename)
+            print("Success")
         } catch {
         //
     }
@@ -152,6 +157,7 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
                 transcribeText.text = result.bestTranscription.formattedString
                 // pull out the best transcription...
                 print(result.bestTranscription.formattedString)
+                coreDataManager.saveSong(lyric: transcribeText.text)
             }
         }
     }

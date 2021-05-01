@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A50E386E26379E6E0038B0D7 /* LyricmateModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A50E386C26379E6E0038B0D7 /* LyricmateModel.xcdatamodeld */; };
-		A51CBA0E2639A79E00D6A8F4 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51CBA0D2639A79E00D6A8F4 /* StackViewController.swift */; };
 		A5A0601C261BEE15003C7CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0601B261BEE15003C7CF0 /* AppDelegate.swift */; };
 		A5A0601E261BEE15003C7CF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0601D261BEE15003C7CF0 /* SceneDelegate.swift */; };
 		A5A06020261BEE15003C7CF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0601F261BEE15003C7CF0 /* ViewController.swift */; };
@@ -17,6 +15,11 @@
 		A5A06028261BEE1A003C7CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A06026261BEE1A003C7CF0 /* LaunchScreen.storyboard */; };
 		A5A06033261BEE1A003C7CF0 /* LyricmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A06032261BEE1A003C7CF0 /* LyricmateTests.swift */; };
 		A5A0603E261BEE1A003C7CF0 /* LyricmateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0603D261BEE1A003C7CF0 /* LyricmateUITests.swift */; };
+		A5F82CFC263DE861003DF203 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F82CFB263DE861003DF203 /* CoreDataManager.swift */; };
+		A5F82D20263DF658003DF203 /* Song+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F82D1E263DF658003DF203 /* Song+CoreDataClass.swift */; };
+		A5F82D21263DF658003DF203 /* Song+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F82D1F263DF658003DF203 /* Song+CoreDataProperties.swift */; };
+		A5F82D36263DF895003DF203 /* LyricmateModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = A50E386C26379E6E0038B0D7 /* LyricmateModel.xcdatamodeld */; };
+		A5F82D44263E0036003DF203 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F82D43263E0036003DF203 /* SongListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		A50E386D26379E6E0038B0D7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		A51CBA0D2639A79E00D6A8F4 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		A5A06018261BEE15003C7CF0 /* Lyricmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyricmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A0601B261BEE15003C7CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5A0601D261BEE15003C7CF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,10 @@
 		A5A06039261BEE1A003C7CF0 /* LyricmateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricmateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A0603D261BEE1A003C7CF0 /* LyricmateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricmateUITests.swift; sourceTree = "<group>"; };
 		A5A0603F261BEE1A003C7CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5F82CFB263DE861003DF203 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A5F82D1E263DF658003DF203 /* Song+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Song+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A5F82D1F263DF658003DF203 /* Song+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Song+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A5F82D43263E0036003DF203 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +109,12 @@
 		A5A0601A261BEE15003C7CF0 /* Lyricmate */ = {
 			isa = PBXGroup;
 			children = (
+				A5F82D00263DEAFC003DF203 /* Models */,
 				A50E386C26379E6E0038B0D7 /* LyricmateModel.xcdatamodeld */,
 				A5A0601B261BEE15003C7CF0 /* AppDelegate.swift */,
 				A5A0601D261BEE15003C7CF0 /* SceneDelegate.swift */,
-				A51CBA0D2639A79E00D6A8F4 /* StackViewController.swift */,
+				A5F82D43263E0036003DF203 /* SongListViewController.swift */,
+				A5F82CF9263DE80E003DF203 /* Services */,
 				A5A0601F261BEE15003C7CF0 /* ViewController.swift */,
 				A5A06021261BEE15003C7CF0 /* Main.storyboard */,
 				A5A06024261BEE1A003C7CF0 /* Assets.xcassets */,
@@ -132,6 +140,23 @@
 				A5A0603F261BEE1A003C7CF0 /* Info.plist */,
 			);
 			path = LyricmateUITests;
+			sourceTree = "<group>";
+		};
+		A5F82CF9263DE80E003DF203 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A5F82CFB263DE861003DF203 /* CoreDataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A5F82D00263DEAFC003DF203 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5F82D1E263DF658003DF203 /* Song+CoreDataClass.swift */,
+				A5F82D1F263DF658003DF203 /* Song+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F82D36263DF895003DF203 /* LyricmateModel.xcdatamodeld in Resources */,
 				A5A06028261BEE1A003C7CF0 /* LaunchScreen.storyboard in Resources */,
 				A5A06025261BEE1A003C7CF0 /* Assets.xcassets in Resources */,
 				A5A06023261BEE15003C7CF0 /* Main.storyboard in Resources */,
@@ -264,11 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F82D44263E0036003DF203 /* SongListViewController.swift in Sources */,
+				A5F82CFC263DE861003DF203 /* CoreDataManager.swift in Sources */,
 				A5A06020261BEE15003C7CF0 /* ViewController.swift in Sources */,
+				A5F82D21263DF658003DF203 /* Song+CoreDataProperties.swift in Sources */,
+				A5F82D20263DF658003DF203 /* Song+CoreDataClass.swift in Sources */,
 				A5A0601C261BEE15003C7CF0 /* AppDelegate.swift in Sources */,
-				A51CBA0E2639A79E00D6A8F4 /* StackViewController.swift in Sources */,
 				A5A0601E261BEE15003C7CF0 /* SceneDelegate.swift in Sources */,
-				A50E386E26379E6E0038B0D7 /* LyricmateModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
