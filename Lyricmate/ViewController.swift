@@ -11,7 +11,8 @@ import Speech
 import CoreData
 
 
-class ViewController: UIViewController, AVAudioRecorderDelegate{
+
+class ViewController: UIViewController,AVAudioRecorderDelegate{
 
 
     @IBOutlet weak var playButton: UIButton!
@@ -84,6 +85,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate{
 
         if success {
             recordButton.setTitle("Tap to Re-record", for: .normal)
+    
         } else {
             recordButton.setTitle("Tap to Record", for: .normal)
             // recording failed :(

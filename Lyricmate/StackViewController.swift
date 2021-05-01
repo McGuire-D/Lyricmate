@@ -9,9 +9,10 @@ import Foundation
 import CoreData
 
 struct StackViewController {
-    class SavingLyrics: Lyrics {
+    class NSpersistentContainer: NSObject {
+    
         func saveContext() {
-        let context = persistentContainer.viewContext
+        let NSpersistentContainer = persistentContainer.viewContext
              if context.hasChanges {
                do {
                  try context.save()
