@@ -119,22 +119,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "66BF8EFE-F687-472B-A854-D67D3BAF3A74"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Lyricmate/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "transcribeAudio(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "DE1155E6-3FD3-4A87-8AF3-263255E8142E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -160,7 +144,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
-            landmarkName = "saveSong(lyric:)"
+            landmarkName = "saveSong(lyric:audio:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -174,9 +158,9 @@
             filePath = "Lyricmate/Services/CoreDataManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "saveSong(lyric:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "saveSong(lyric:audio:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

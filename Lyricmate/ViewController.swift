@@ -119,7 +119,7 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
             transcribeAudio(url: audioFilename)
             print("Success")
         } catch {
-        //
+            print("There was an error: \(error)")
     }
     
 
@@ -155,9 +155,17 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
             // if we got the final transcription back, print it
             if result.isFinal {
                 transcribeText.text = result.bestTranscription.formattedString
+                let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+                
+                do {
+                   let data = try Data(contentsOf: audioFilename)
+                    coreDataManager.saveSong(lyric: transcribeText.text ,audio: data)
+                    print(result.bestTranscription.formattedString)
+                } catch {
+                    print("There was an error: \(error)")
+                    
+                }
                 // pull out the best transcription...
-                print(result.bestTranscription.formattedString)
-                coreDataManager.saveSong(lyric: transcribeText.text)
             }
         }
     }

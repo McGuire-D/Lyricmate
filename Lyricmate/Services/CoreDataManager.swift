@@ -12,11 +12,12 @@ import CoreData
 class CoreDataManager {
     var managedContext: NSManagedObjectContext!
     
-    func saveSong(lyric: String) {
+    func saveSong(lyric: String, audio: Data ) {
         //let song = Song(context: managedContext)
         let entity = NSEntityDescription.entity(forEntityName: "Song", in: managedContext)!
         let song = NSManagedObject(entity: entity, insertInto: managedContext) as? Song
         song?.lyrics = lyric
+        song?.vocals = audio
         //song!.setValue(lyric, forKey: "lyrics")
         save()
     }
