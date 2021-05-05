@@ -15,6 +15,7 @@
 		A5A06028261BEE1A003C7CF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A06026261BEE1A003C7CF0 /* LaunchScreen.storyboard */; };
 		A5A06033261BEE1A003C7CF0 /* LyricmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A06032261BEE1A003C7CF0 /* LyricmateTests.swift */; };
 		A5A0603E261BEE1A003C7CF0 /* LyricmateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0603D261BEE1A003C7CF0 /* LyricmateUITests.swift */; };
+		A5D527D42642290A0041B49E /* DidSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D527D32642290A0041B49E /* DidSelectViewController.swift */; };
 		A5F82CFC263DE861003DF203 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F82CFB263DE861003DF203 /* CoreDataManager.swift */; };
 		A5F82D20263DF658003DF203 /* Song+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F82D1E263DF658003DF203 /* Song+CoreDataClass.swift */; };
 		A5F82D21263DF658003DF203 /* Song+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F82D1F263DF658003DF203 /* Song+CoreDataProperties.swift */; };
@@ -55,6 +56,7 @@
 		A5A06039261BEE1A003C7CF0 /* LyricmateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricmateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A0603D261BEE1A003C7CF0 /* LyricmateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricmateUITests.swift; sourceTree = "<group>"; };
 		A5A0603F261BEE1A003C7CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5D527D32642290A0041B49E /* DidSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DidSelectViewController.swift; sourceTree = "<group>"; };
 		A5F82CFB263DE861003DF203 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A5F82D1E263DF658003DF203 /* Song+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Song+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A5F82D1F263DF658003DF203 /* Song+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Song+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -113,9 +115,10 @@
 				A50E386C26379E6E0038B0D7 /* LyricmateModel.xcdatamodeld */,
 				A5A0601B261BEE15003C7CF0 /* AppDelegate.swift */,
 				A5A0601D261BEE15003C7CF0 /* SceneDelegate.swift */,
-				A5F82D43263E0036003DF203 /* SongListViewController.swift */,
 				A5F82CF9263DE80E003DF203 /* Services */,
 				A5A0601F261BEE15003C7CF0 /* ViewController.swift */,
+				A5D527D32642290A0041B49E /* DidSelectViewController.swift */,
+				A5F82D43263E0036003DF203 /* SongListViewController.swift */,
 				A5A06021261BEE15003C7CF0 /* Main.storyboard */,
 				A5A06024261BEE1A003C7CF0 /* Assets.xcassets */,
 				A5A06026261BEE1A003C7CF0 /* LaunchScreen.storyboard */,
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D527D42642290A0041B49E /* DidSelectViewController.swift in Sources */,
 				A5F82D44263E0036003DF203 /* SongListViewController.swift in Sources */,
 				A5F82CFC263DE861003DF203 /* CoreDataManager.swift in Sources */,
 				A5A06020261BEE15003C7CF0 /* ViewController.swift in Sources */,

@@ -28,6 +28,12 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           print("section: \(indexPath.section)")
+           print("row: \(indexPath.row)")
+        performSegue(withIdentifier: "DidSelectViewController", sender: UITableView.self)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songList.count
     }
@@ -38,6 +44,7 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.textLabel?.text = song.lyrics
         return cell
     }
+    
     
     
     
