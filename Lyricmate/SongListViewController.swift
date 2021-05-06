@@ -32,6 +32,16 @@ class SongListViewController: UIViewController, UITableViewDelegate, UITableView
            print("section: \(indexPath.section)")
            print("row: \(indexPath.row)")
         performSegue(withIdentifier: "DidSelectViewController", sender: UITableView.self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DidSelectViewController" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = segue.destination as! DidSelectViewController
+                controller.song = songList[indexPath.row]
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
