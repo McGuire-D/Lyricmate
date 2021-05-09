@@ -9,11 +9,14 @@ import UIKit
 
 class SongListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+   
+    
 
     @IBOutlet weak var tableView: UITableView!
     
     var songList: [Song] = []
     var coreDataManager: CoreDataManager!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

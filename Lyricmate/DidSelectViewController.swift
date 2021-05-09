@@ -25,6 +25,8 @@ class DidSelectViewController : UIViewController {
         let managedContext = appDelegate!.persistentContainer.viewContext
         coreDataManager = CoreDataManager(managedContext: managedContext)
         
+        textView?.text = song.lyrics
+        
         
         //
 
@@ -32,11 +34,14 @@ class DidSelectViewController : UIViewController {
     
     
     @IBAction func playBackAudio() {
+        print("Button Call")
         
-        if let audioData = song.vocals{
-            let playBack  = try? AVAudioPlayer.init(data: audioData)
+            let urlstring = "song.vocals"
+            let url = NSURL(string: urlstring)
+            let playBack  = try? AVAudioPlayer(contentsOf: url! as URL)
             playBack?.play()
-        }
+            print("I Played")
+        
 
 //        do {
 //            playBack = try AVAudioPlayer(contentsOf: audioFilename)
