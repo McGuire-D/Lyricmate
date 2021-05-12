@@ -129,6 +129,9 @@
                                     <imageReference key="image" image="record.circle" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100" scale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="recordTapped" destination="U0X-JB-Cjv" eventType="touchUpInside" id="DDU-Bp-bGg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pm9-N6-sAM" userLabel="PlayButton">
                                 <rect key="frame" x="0.0" y="505.5" width="414" height="104"/>

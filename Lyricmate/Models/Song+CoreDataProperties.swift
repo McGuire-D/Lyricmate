@@ -17,7 +17,7 @@ extension Song {
     }
 
     @NSManaged public var lyrics: String?
-    @NSManaged public var vocals: Data?
+    @NSManaged public var uuid: String?
 
 }
 

@@ -12,7 +12,7 @@ import CoreData
 
 
 
-class ViewController: UIViewController,AVAudioRecorderDelegate{
+class ViewController: UIViewController, AVAudioPlayerDelegate {
 
 
     @IBOutlet weak var playButton: UIButton!
@@ -21,36 +21,41 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
     
     
     //var recordButton: UIButton!
-    var recordingSession: AVAudioSession!
-    var audioRecorder: AVAudioRecorder!
-    var playBack: AVAudioPlayer?
+//    var recordingSession: AVAudioSession!
+//    var audioRecorder: AVAudioRecorder!
+//    var playBack: AVAudioPlayer?
+    var audioManager: AudioManager!
     var coreDataManager: CoreDataManager!
+    let uuid = UUID().uuidString
     //var lyrics: NSManagedObject = [Lyrics]
     //var sound: NSManagedObject = [Lyrics]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        recordingSession = AVAudioSession.sharedInstance()
-        requestTranscribePermissions()
+//        recordingSession = AVAudioSession.sharedInstance()
+//        requestTranscribePermissions()
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         let managedContext = appDelegate!.persistentContainer.viewContext
         coreDataManager = CoreDataManager(managedContext: managedContext)
-        do {
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
-            try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
-                DispatchQueue.main.async {
-                    if allowed {
-                        self.loadRecordingUI()
-                    } else {
-                        // failed to record!
-                    }
-                }
-            }
-        } catch {
-            // place error on screen alert here
-        }
+        audioManager = AudioManager()
+        //audioRecorder.delegate = self
+        
+//        do {
+//            try recordingSession.setCategory(.playAndRecord, mode: .default)
+//            try recordingSession.setActive(true)
+//            recordingSession.requestRecordPermission() { [unowned self] allowed in
+//                DispatchQueue.main.async {
+//                    if allowed {
+//                        self.loadRecordingUI()
+//                    } else {
+//                        // failed to record!
+//                    }
+//                }
+//            }
+//        } catch {
+//            // place error on screen alert here
+//        }
         // Do any additional setup after loading the view.
     }
     func loadRecordingUI() {
@@ -60,25 +65,29 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
         view.addSubview(recordButton)
     }
     func startRecording() {
-        let uuid = UUID().uuidString
+        
         let audioFilename = getDocumentsDirectory().appendingPathComponent(uuid)
-
-        let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey: 12000,
-            AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-        ]
-
-        do {
-            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
-            audioRecorder.delegate = self
-            audioRecorder.record()
-
-            recordButton.setTitle("Tap to Stop", for: .normal)
-        } catch {
-            finishRecording(success: false)
-        }
+        audioManager.startRecording(url: audioFilename)
+        
+      
+//
+//        let settings = [
+//            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+//            AVSampleRateKey: 12000,
+//            AVNumberOfChannelsKey: 1,
+//            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+//        ]
+//
+//        do {
+//          audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+//          audioRecorder.delegate = self
+//          audioRecorder.record()
+//
+//            recordButton.setTitle("Tap to Stop", for: .normal)
+//        } catch {
+//            finishRecording(success: false)
+//
+//        }
     }
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -86,58 +95,61 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
     }
 
     func finishRecording(success: Bool) {
-        audioRecorder.stop()
-        audioRecorder = nil
+//        audioRecorder.stop()
+//        audioRecorder = nil
 
-        if success {
-            recordButton.setTitle("Tap to Re-record", for: .normal)
-        } else {
-            recordButton.setTitle("Tap to Record", for: .normal)
-            // recording failed :(
-        }
+//        if success {
+//            recordButton.setTitle("Tap to Re-record", for: .normal)
+//        } else {
+//            recordButton.setTitle("Tap to Record", for: .normal)
+//            // recording failed :(
+//        }
     }
     
-    @objc func recordTapped() {
-        if audioRecorder == nil {
+    @IBAction func recordTapped() {
+        
+        let audioFilename = getDocumentsDirectory().appendingPathComponent(uuid)
+        audioManager.startRecording(url: audioFilename)
 
-            startRecording()
-        } else {
-            finishRecording(success: true)
-        }
-    }
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if !flag {
-            finishRecording(success: false)
-        }
+//        if audioRecorder == nil {
+
+//            startRecording()
+//        } else {
+//            finishRecording(success: true)
+//        }
+//    }
+//    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+//        if !flag {
+//            finishRecording(success: false)
+//        }
     }
     
     @IBAction func playBackAudio() {
          
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
-
-        do {
-            playBack = try AVAudioPlayer(contentsOf: audioFilename)
-            playBack?.play()
-            transcribeAudio(url: audioFilename)
-            print("Success")
-        } catch {
-            print("There was an error: \(error)")
-    }
+//        let audioFilename = getDocumentsDirectory().appendingPathComponent(uuid)
+//
+//        do {
+//            playBack = try AVAudioPlayer(contentsOf: audioFilename)
+//            playBack?.play()
+//            transcribeAudio(url: audioFilename)
+//            print("Success")
+//        } catch {
+//            print("There was an error: \(error)")
+//    }
     
-
 }
     
-    func requestTranscribePermissions() {
-        SFSpeechRecognizer.requestAuthorization { [unowned self] authStatus in
-            DispatchQueue.main.async {
-                if authStatus == .authorized {
-                    print("Good to go!")
-                } else {
-                    print("Transcription permission was declined.")
-                }
-            }
-        }
-    }
+//    func requestTranscribePermissions() {
+//        SFSpeechRecognizer.requestAuthorization { [unowned self] authStatus in
+//            DispatchQueue.main.async {
+//                if authStatus == .authorized {
+//                    print("Good to go!")
+//                } else {
+//                    print("Transcription permission was declined.")
+//                }
+//            }
+//        }
+//    }
     
     func transcribeAudio(url: URL) {
         // create a new recognizer and point it at our audio
@@ -157,21 +169,26 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
             // if we got the final transcription back, print it
             if result.isFinal {
                 transcribeText.text = result.bestTranscription.formattedString
-                let uuid = UUID().uuidString
-                let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+                coreDataManager.saveSong(lyric: transcribeText.text, uuid: uuid)
                 
-                do {
-                   let data = try Data(contentsOf: audioFilename)
-                    coreDataManager.saveSong(lyric: transcribeText.text ,audio: data)
-                    print(result.bestTranscription.formattedString)
-                } catch {
-                    print("There was an error: \(error)")
-                    
-                }
+//                do {
+//                   //let data = try Data(contentsOf: audioFilename)
+//                    coreDataManager.saveSong(lyric: transcribeText.text ,uuid: uuid)
+//                    print(result.bestTranscription.formattedString)
+//                } catch {
+//                    print("There was an error: \(error)")
+//
+//                }
                 // pull out the best transcription...
             }
         }
     }
-       
-   
+    
+    
 }
+
+// MARK: AVAudioDelegateFunctions
+
+//extension ViewController : {
+//
+//}
