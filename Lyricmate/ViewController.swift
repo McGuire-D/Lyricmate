@@ -60,7 +60,8 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
         view.addSubview(recordButton)
     }
     func startRecording() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        let uuid = UUID().uuidString
+        let audioFilename = getDocumentsDirectory().appendingPathComponent(uuid)
 
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -111,6 +112,7 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
     }
     
     @IBAction func playBackAudio() {
+         
         let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
 
         do {
@@ -155,6 +157,7 @@ class ViewController: UIViewController,AVAudioRecorderDelegate{
             // if we got the final transcription back, print it
             if result.isFinal {
                 transcribeText.text = result.bestTranscription.formattedString
+                let uuid = UUID().uuidString
                 let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
                 
                 do {
