@@ -10,9 +10,12 @@ import AVFoundation
 import Speech
 import CoreData
 
+protocol RecordSelectDelegate {
+    func finishRecording(type: Bool)
+}
 
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class mainView: UIViewController, AVAudioPlayerDelegate {
 
 
     @IBOutlet weak var playButton: UIButton!
@@ -24,6 +27,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
 //    var recordingSession: AVAudioSession!
 //    var audioRecorder: AVAudioRecorder!
 //    var playBack: AVAudioPlayer?
+    var recordDelegate: RecordSelectDelegate!
     var audioManager: AudioManager!
     var coreDataManager: CoreDataManager!
     let uuid = UUID().uuidString
@@ -110,6 +114,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         
         let audioFilename = getDocumentsDirectory().appendingPathComponent(uuid)
         audioManager.startRecording(url: audioFilename)
+        
 
 //        if audioRecorder == nil {
 

@@ -206,9 +206,9 @@
             filePath = "Lyricmate/AudioManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "audioRecorderDidFinishRecording(_:successfully:)"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "finishRecording(success:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
